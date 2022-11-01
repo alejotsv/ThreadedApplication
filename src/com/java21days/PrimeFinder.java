@@ -6,6 +6,14 @@ public class PrimeFinder implements Runnable {
     public boolean finished = false;
     private Thread runner;
 
+    PrimeFinder(long target){
+        this.target = target;
+        if(runner == null){
+            runner = new Thread(this);
+            runner.start();
+        }
+    }
+
     @Override
     public void run() {
 
