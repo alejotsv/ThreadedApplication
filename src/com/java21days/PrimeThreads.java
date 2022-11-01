@@ -11,7 +11,7 @@ public class PrimeThreads {
             try{
                 long count = Long.parseLong(args[i]);
                 finder[i] = new PrimeFinder(count);
-                System.out.println("Looking for primer " + count);
+                System.out.println("Looking for prime " + count);
             } catch (NumberFormatException nfe) {
                 System.out.println("Error: " + nfe.getMessage());
             }
