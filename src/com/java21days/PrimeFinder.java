@@ -16,6 +16,25 @@ public class PrimeFinder implements Runnable {
 
     @Override
     public void run() {
+        long numPrimes = 0;
+        long candidate = 2;
+        while(numPrimes < target){
+            if(isPrime(candidate)) {
+                numPrimes++;
+                prime = candidate;
+            }
+            candidate++;
+        }
+        finished = true;
+    }
 
+    boolean isPrime(long checkNumber){
+        double root = Math.sqrt(checkNumber);
+        for(int i=0; i<=root; i++){
+            if(checkNumber % i == 0){
+                return false;
+            }
+        }
+        return true;
     }
 }
