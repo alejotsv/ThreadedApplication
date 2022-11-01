@@ -30,7 +30,7 @@ public class PrimeFinder implements Runnable {
 
     boolean isPrime(long checkNumber){
         double root = Math.sqrt(checkNumber);
-        for(int i=0; i<=root; i++){
+        for(int i=2; i<=root; i++){
             if(checkNumber % i == 0){
                 return false;
             }
